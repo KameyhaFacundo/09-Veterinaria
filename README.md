@@ -1,6 +1,6 @@
 # Practica de React - Paciente de veterinaria
 
-_Registrar una cita en una veterinaria, permite borrar las citas y guardadas en el localstorage _
+_Registrar una cita en una veterinaria, permite borrar las citas y guardadas en el localstorage_
 
 ### Demo ⭐
 
