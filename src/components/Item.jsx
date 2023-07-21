@@ -13,28 +13,27 @@ const Item = ({
     <Card>
       <Card.Body>
         <Row>
-          <Col>
+          <Col xs={3}>
             <div
               className="d-flex justify-content-center align-items-center mb-3"
               style={{
-                height: "60px",
-                width: "60px",
+                height: "50px",
+                width: "50px",
                 borderRadius: "50%",
                 backgroundColor: "#007bff",
-                color: "#fff",
-                fontWeight: "bold",
-                fontSize: "20px",
+                padding: 0,
+                margin: 0,
               }}
             ></div>
           </Col>
           <Col>
-            <p className="mb-4">{nombreMascota}</p>
+            <p className="mb-4 fs-6">Mascota: {nombreMascota}</p>
 
-            <p className="mb-3">{nombreDuenio}</p>
+            <p className="mb-3 fs-6">Dueño: {nombreDuenio}</p>
           </Col>
         </Row>
         <hr className="border-1 my-0" />
-        <Row>
+        <Row className=" fs-6">
           <p>Fecha: {fecha}</p>
           <p>Hora: {hora}</p>
           <p>Síntomas: {sintomas}</p>
