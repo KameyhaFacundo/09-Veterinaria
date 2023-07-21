@@ -1,7 +1,7 @@
 import React from "react";
 
-const Citas = () => {
-  return <div></div>;
+const Citas = ({ citas }) => {
+  return <></>;
 };
 
 export default Citas;
