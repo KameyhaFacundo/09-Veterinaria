@@ -32,9 +32,26 @@ const Formulario = () => {
     setSintomas("");
   };
 
+  const hayCitas = () => {
+    return citas.length > 0 ? (
+      <Citas citas={citas}></Citas>
+    ) : (
+      <div
+        className="p-5"
+        style={{ width: "100%", height: "100%", backgroundColor: "white" }}
+      >
+        <h3 className="text-center p-5">No hay citas</h3>
+      </div>
+    );
+  };
+
   return (
     <>
-      <Form className="bg-dark text-light" onSubmit={handleSubmit}>
+      <Form
+        className="bg-dark text-light p-4 my-4 rounded border"
+        onSubmit={handleSubmit}
+      >
+        <h2 className="text-center mb-4">Veterinaria</h2>
         <Row className="mb-3">
           <Col>
             <Form.Group controlId="nombreMascota">
@@ -100,7 +117,7 @@ const Formulario = () => {
           Agregar Nueva Cita
         </Button>
       </Form>
-      <Citas citas={citas}></Citas>
+      <h1>{hayCitas()}</h1>
     </>
   );
 };

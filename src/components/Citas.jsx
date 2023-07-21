@@ -6,8 +6,7 @@ const Citas = ({ citas }) => {
   return (
     <>
       <div className="mt-4">
-        <h3 className="text-center">Administra las citas aqui</h3>
-
+        <h3 className="text-center dark">Administra las citas aqui</h3>
         <Row xs={1} md={2} lg={3} xl={4} className="g-4">
           {citas.map((cita, index) => (
             <Col key={index}>
