@@ -5,7 +5,7 @@ import Citas from "./Citas";
 
 const Formulario = () => {
   const [nombreMascota, setNombreMascota] = useState("");
-  const [dueñoMascota, setDueñoMascota] = useState("");
+  const [nombreDuenio, setDuenioMascota] = useState("");
   const [fecha, setFecha] = useState("");
   const [hora, setHora] = useState("");
   const [sintomas, setSintomas] = useState("");
@@ -17,7 +17,7 @@ const Formulario = () => {
 
     const nuevaCita = {
       nombreMascota,
-      dueñoMascota,
+      nombreDuenio,
       fecha,
       hora,
       sintomas,
@@ -26,7 +26,7 @@ const Formulario = () => {
     setCitas([...citas, nuevaCita]);
 
     setNombreMascota("");
-    setDueñoMascota("");
+    setDuenioMascota("");
     setFecha("");
     setHora("");
     setSintomas("");
@@ -48,12 +48,12 @@ const Formulario = () => {
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group controlId="dueñoMascota">
+            <Form.Group controlId="nombreDuenio">
               <Form.Label>Dueño de Mascota</Form.Label>
               <Form.Control
                 type="text"
-                value={dueñoMascota}
-                onChange={(e) => setDueñoMascota(e.target.value)}
+                value={nombreDuenio}
+                onChange={(e) => setDuenioMascota(e.target.value)}
                 required
               />
             </Form.Group>
