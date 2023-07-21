@@ -34,7 +34,7 @@ const Formulario = () => {
 
   const hayCitas = () => {
     return citas.length > 0 ? (
-      <Citas citas={citas}></Citas>
+      <Citas citas={citas} borrarCita={borrarCita}></Citas>
     ) : (
       <div
         className="p-5"
@@ -43,6 +43,13 @@ const Formulario = () => {
         <h3 className="text-center p-5">No hay citas</h3>
       </div>
     );
+  };
+
+  const borrarCita = (borrarMascota) => {
+    let listaCitas = citas.filter(
+      (itemCita) => itemCita.nombreMascota !== borrarMascota
+    );
+    setCitas(listaCitas);
   };
 
   return (

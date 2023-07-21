@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item";
 import { Row, Col } from "react-bootstrap";
 
-const Citas = ({ citas }) => {
+const Citas = ({ citas, borrarCita }) => {
   return (
     <>
       <div className="mt-4">
@@ -16,6 +16,7 @@ const Citas = ({ citas }) => {
                 fecha={cita.fecha}
                 hora={cita.hora}
                 sintomas={cita.sintomas}
+                borrarCita={borrarCita}
               ></Item>
             </Col>
           ))}

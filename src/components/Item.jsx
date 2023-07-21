@@ -1,7 +1,14 @@
 import React from "react";
 import { Button, Row, Col, Card } from "react-bootstrap";
 
-const Item = ({ nombreMascota, nombreDuenio, fecha, hora, sintomas }) => {
+const Item = ({
+  nombreMascota,
+  nombreDuenio,
+  fecha,
+  hora,
+  sintomas,
+  borrarCita,
+}) => {
   return (
     <Card>
       <Card.Body>
@@ -38,7 +45,7 @@ const Item = ({ nombreMascota, nombreDuenio, fecha, hora, sintomas }) => {
       <Button
         className="m-2"
         variant="success"
-        // onClick={() => borrarColor(color)}
+        onClick={() => borrarCita(nombreMascota)}
       >
         Borrar
       </Button>
